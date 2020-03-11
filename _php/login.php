@@ -17,7 +17,7 @@ $(document).on('click','#log_out', function() {
 });
 
 
-      if( readCookie("logged_in") ) {
+      if( readCookie("logged_in") && readCookie('userid') ) {
                       $("#log_in").text("Logout: "+readCookie('userid'));
                       $("#log_in").attr('id', 'log_out');
                         $(".data").attr('class', 'show');

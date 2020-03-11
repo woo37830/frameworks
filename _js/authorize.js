@@ -5,11 +5,12 @@
           //alert("form data: " + document.getElementById("userid").value);
           uName = document.getElementById("userid").value;
           var pName = document.getElementById("password").value;
+          pName = pName.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
          $('#lin').dialog('close');
          var done = false;
        for( var i=0;i<users.length&&!done;i++) {
            // alert("Testing '"+users[i].user+"' and '"+users[i].passwd+"'");
-              if( uName == users[i].user && pName == users[i].passwd ) {
+            if( uName == users[i].user && pName == users[i].passwd ) {
                   createCookie('logged_in', 'yes', days);
                   createCookie('userid', uName);
                   user = uName;
