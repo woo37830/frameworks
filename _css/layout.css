@@ -41,7 +41,6 @@ h3 {
     margin-right: 20px;
     position:relative; float:right;
     height: 25px;
-    #border: 5px solid yellow;
 }
 
 .login
@@ -84,15 +83,12 @@ footer {
     padding-bottom: 10px;
     width: auto;
     height: 200px;
-    #border: 5px solid red;
 }
 .header
 {
     padding-left: 5px;
     padding-right: 5px;
     margin-bottom: 10px;
-    #background-color: #2ecc71;
-    #border: 2px solid black;
 }
 
 label
@@ -104,11 +100,9 @@ label
 #content {
 	vertical-align: top;
 	width: auto;
-	#height: auto;
 	min-height:  100%;
 	padding: 10px;
   margin-bottom: 30px;
-  #border: 3px solid orange;
 }
 
 .data {
@@ -118,7 +112,6 @@ label
   width: auto;
   height: 100%;
   margin-bottom: -30px;
-  #border: 3px solid red;
 }
 
 #page_num
@@ -128,7 +121,6 @@ label
   padding-top: 5px;
   padding-bottom: 5px;
   font-size:12pt; font-family:arial;
-  #border: 3px solid blue;
 }
 
 #page {
@@ -153,13 +145,11 @@ label
   text-align: center;
   width: 100%;
   height: 30px;
-  #border: 3px solid red;
 }
 
 #navigation {
   width: 20px;
   float: left;
-  #border: 3px solid green;
 }
 
 #debug {
@@ -184,7 +174,6 @@ footer {
   padding-bottom: 10px;
   font-size: 12px;
   font-family: 'Trebuchet MS', Arial, sans-serif;
-  #border: 5px solid red;
 }
 .footer {
     position: fixed;
@@ -193,7 +182,7 @@ footer {
     right: 10px;
     padding-top: 18px;
     padding-bottom: 10px;
-    #background: url(../_images/bg-footer.png) repeat-x left top;
+    /*background: url(../_images/bg-footer.png) repeat-x left top;
     /*border: 5px solid black;*/
 }
 .footer p {
@@ -232,6 +221,7 @@ footer {
 /* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
+  border-color: red;
 }
 
 /* Style the tab content */
@@ -256,7 +246,6 @@ footer {
     padding-top: 20px;
     font-size:18pt; font-family:arial;
     text-align: center;
-    #border: 5px solid gray;
 }
 
 #lin {
@@ -492,4 +481,24 @@ tr#debug-token {
   -ms-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   transform: rotate(270deg);
+}
+
+blink {
+    animation: blinker 0.6s linear infinite;
+    color: #1c87c9;
+}
+@keyframes blinker {  
+    50% { opacity: 0; }
+}
+.blink-one {
+    animation: blinker-one 1s linear infinite;
+}
+@keyframes blinker-one {  
+    0% { opacity: 0; }
+}
+.blink-two {
+    animation: blinker-two 1.4s linear infinite;
+}
+@keyframes blinker-two {  
+    100% { opacity: 0; }
 }
